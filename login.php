@@ -16,7 +16,7 @@
         <div class="nav-left">
             <div>
                 <a href="index.php">
-                    <img class="logo" src="css/icons/user.png"></img>
+                    <img class="logo" src="css/icons/image.png"></img>
                 </a>
             </div>
         </div>
@@ -25,19 +25,19 @@
                 <div class="nav-cat-tile">
                     <a href="shoppingcart.php">
                         <img class="nav-icon" src="css/icons/shopping-cart.png"></img>
-                        Warenkorb
+                        <!-- Warenkorb -->
                     </a>
                 </div>
                 <div class="nav-cat-tile">
                     <a href="favorites.php">
                         <img class="nav-icon" src="css/icons/heart.png"></img>
-                        Favoriten
+                        <!-- Favoriten -->
                     </a>
                 </div>
                 <div class="nav-cat-tile">
                     <a href="account.php">
                         <img class="nav-icon" src="css/icons/user.png"></img>
-                        Konto
+                        <!-- Konto -->
                     </a>
                 </div>
             </div>

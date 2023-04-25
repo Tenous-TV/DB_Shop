@@ -9,12 +9,12 @@ a {
 }
 
 body {
-    background-color: grey;
+    background-color: rgb(221, 217, 217);
 }
 
 .logo {
-    width: 35px;
-    height: 35px;
+    width: 150px;
+    height: 70px;
 }
 
 .search-bar {
@@ -40,7 +40,7 @@ body {
 }
 
 nav {
-    background-color: red;
+    background-color: rgb(255, 201, 60);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,5 +68,5 @@ nav {
     justify-content: center;
     align-items: center;
     margin-right: 1em;
-    background-color: gray;
+    
 }

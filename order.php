@@ -19,7 +19,7 @@
         <div class="nav-left">
             <div>
                 <a href="index.php">
-                    <img class="logo" src="css/icons/user.png"></img>
+                    <img class="logo" src="css/icons/image.png"></img>
                 </a>
             </div>
         </div>
@@ -28,19 +28,19 @@
                 <div class="nav-cat-tile">
                     <a href="shoppingcart.php">
                         <img class="nav-icon" src="css/icons/shopping-cart.png"></img>
-                        Warenkorb
+                         <!-- Warenkorb -->
                     </a>
                 </div>
                 <div class="nav-cat-tile">
                     <a href="favorites.php">
                         <img class="nav-icon" src="css/icons/heart.png"></img>
-                        Favoriten
+                         <!-- Favoriten -->
                     </a>
                 </div>
                 <div class="nav-cat-tile">
                     <a href="login.php">
                         <img class="nav-icon" src="css/icons/user.png"></img>
-                        Konto
+                         <!-- Konto -->
                     </a>
                 </div>
             </div>
@@ -125,15 +125,6 @@
                     ";
 
                     if (isset($_POST['submit_order'])) {
-
-                        //überprüft ob die userinfos geupdated werden sollen
-                        if (isset($_POST['save_info'])) {
-                            $abfrage = "UPDATE users SET zipcode='$_POST[zipcode]', city='$_POST[city]', street='$_POST[street]', country='$_POST[country]', firstname='$_POST[firstname]', lastname='$_POST[lastname]' WHERE id = $_SESSION[userid]";
-                            mysqli_query($con, $abfrage);
-                        }
-
-
-                        //html für die pdf
                         $html = "
                             <strong><p>
                                 $_POST[firstname] $_POST[lastname]
@@ -186,12 +177,7 @@
                             <h3>$totalCost €</h3>
                         ";
 
-                        //erstellt einen neuen eintrag in orders
-                        $date = date("Y-m-d");
-                        mysqli_query($con, "INSERT INTO orders(userid, date) VALUES($_SESSION[userid], '$date')");
-
-                        $abfrage = "SELECT * FROM orders ORDER BY id DESC LIMIT 1";
-                        $rechnungsnummer = mysqli_fetch_assoc(mysqli_query($con, $abfrage))['id'];;
+                        $rechnungsnummer = 0;
 
                         require_once('tcpdf/tcpdf.php');
 
@@ -223,10 +209,6 @@
 
                         $pdfName = 'Rechnung_' . $rechnungsnummer . '.pdf';
                         $pdf->Output(dirname(__FILE__) . '/rechnungen/' . $pdfName, 'F');
-
-                        echo "
-                            <a href='rechnungen/Rechnung_$rechnungsnummer.pdf' download=''>Rechnung herunterladen</a>
-                        ";
                     }
                 ?>
             </form>

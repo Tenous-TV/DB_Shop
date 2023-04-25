@@ -6,6 +6,7 @@ main {
 .product-info {
     background-color: aqua;
     width: 300px;
+    
 }
 
 .product-info > img {
@@ -27,6 +28,7 @@ main {
 .ratings {
     background-color: blueviolet;
     width: 300px;
+   
 }
 
 .rating > p {
