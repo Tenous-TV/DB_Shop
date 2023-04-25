@@ -1,0 +1,34 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.product-info {
+    background-color: aqua;
+    width: 300px;
+}
+
+.product-info > img {
+    width: 300px;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.f-right {
+    float: right;
+}
+
+.add-rating > form > div {
+    display: flex;
+}
+
+.ratings {
+    background-color: blueviolet;
+    width: 300px;
+}
+
+.rating > p {
+    word-break: break-all;
+}

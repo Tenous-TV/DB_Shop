@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    background-color: aqua;
+    border: 1px solid black;
+    display: flex;
+}
+
+.item > img {
+    width: 130px;
+}

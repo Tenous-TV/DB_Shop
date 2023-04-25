@@ -1,0 +1,25 @@
+.sell-container {
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-tile {
+    padding: 20px;
+    background-color: rgb(129, 184, 58);
+    margin: 10px;
+    width: 150px;
+}
+
+.product-tile > a {
+    color: black;
+}
+
+.product-tile > a > h3 {
+    font-size: large;
+}
+
+.product-tile-img {
+    width: 150px;
+    height: 150px;
+}
